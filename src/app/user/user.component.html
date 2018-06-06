@@ -1,0 +1,22 @@
+Name is {{name}}
+
+<button (click)="onClick()">Delete</button>
+
+<form (submit) ="addthings(things.value)">
+  <div>
+    <label for="things">TODO add</label>
+    <input type="text"+things>
+  </div>
+</form>
+
+<ul>
+  <li *ngFor = "let thing of things; let i = index"> 
+    {{i+1}}:{{things}}
+    <button (click)="deleteTodo(things)">
+      X
+    </button>
+  </li>
+</ul>
+<p>
+  {{things}}
+</p>
